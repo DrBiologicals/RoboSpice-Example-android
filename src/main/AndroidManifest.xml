@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.carstenscholz.robospicemoa" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MoaActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Creates a sibling activity of details so when back is pressed it goes back to the
+        previous parent activity will all data still contained -->
+        <activity
+            android:name=".MoaDetailActivity"
+            android:label="@string/activity_details"
+            android:parentActivityName=".MoaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MoaActivity"/>
+        </activity>
+        <service
+            android:name="com.octo.android.robospice.JacksonGoogleHttpClientSpiceService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

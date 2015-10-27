@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Error: "
+        android:id="@+id/errorText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Method: "
+        android:id="@+id/methodText"
+        android:singleLine="false"
+        android:layout_below="@+id/errorText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Param Name: "
+        android:id="@+id/paramNameText"
+        android:layout_below="@+id/methodText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Param Value: "
+        android:id="@+id/paramValueText"
+        android:layout_below="@+id/paramNameText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/error"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/errorText"
+        android:layout_toEndOf="@+id/errorText"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/method"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/paramNameText"
+        android:layout_toRightOf="@+id/methodText"
+        android:layout_toEndOf="@+id/methodText"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/paramName"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/paramNameText"
+        android:layout_toRightOf="@+id/paramNameText"
+        android:layout_toEndOf="@+id/paramNameText"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/paramValue"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/paramNameText"
+        android:layout_toRightOf="@+id/paramValueText"
+        android:layout_toEndOf="@+id/paramValueText"
+        android:textStyle="italic" />
+</RelativeLayout>
